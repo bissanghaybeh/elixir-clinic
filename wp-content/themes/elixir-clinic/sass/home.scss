@@ -1,0 +1,757 @@
+.homepage-video {
+    width: 100%;
+    max-height: 380px;
+    position: relative;
+    overflow: hidden;
+    .branding-video {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 41%;
+    }
+    .play-btn {
+        @include center_middle_align;
+        width: 49px;
+        height: 49px;
+        border-radius: 100%;
+        border: 2px solid $lightColor;
+        position: absolute;
+        &:focus {
+            outline: none;
+        }
+        .fa {
+            @include center_middle_align;
+            position: absolute;
+            font-size: 20px;
+            color: $lightColor;
+            font-size: 35px;
+        }
+    }
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+    }
+}
+.about-section {
+    padding: 65px 0 70px;
+    background: $sectionBackground;
+    .about-content {
+        padding: 40px 200px 50px;
+        background: $lightColor;
+        margin-bottom: 65px;
+        .title {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .paragraph {
+            margin-bottom: 30px
+        }
+    }
+}
+.link {
+    .fa {
+        font-size: 10px;
+        &:last-of-type {
+            margin-left: -7px;
+        }
+    }
+}
+.custom-service {
+    padding: 0 100px;
+    .title {
+        span {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .registered_trademark {
+            margin-top: 10px;
+            margin-left: -10px;
+            font-size: 15px;
+        }
+    }
+    .subtitle {
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+    .description {
+        display: block;
+        background: $lightColor;
+        width: 100%;
+        font-family: $primaryFont;
+        font-weight: 700;
+        padding: 10px 20px;
+        font-size: 26px;
+    }
+}
+.advantages {
+    padding: 0 30px;
+    margin-top: 60px;
+    overflow: hidden;
+    .advantage {
+        width: 47%;
+        float: left;
+        margin-bottom: 75px;
+        &:nth-child(even) {
+            margin-left: 6%;
+        }
+        .descriptive-image {
+            width: 90px;
+            padding-right: 30px;
+            padding-top: 20px;
+            float: left;
+            img {
+                width: auto;
+            }
+        }
+    }
+    .descriptive-details {
+        width: calc(100% - 90px);
+        float: left;
+        position: relative;
+        padding-left: 15px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            border: 1px solid $primaryColor;
+            left: 0;
+        }
+    }
+    h4 {
+        @include subTitle;
+        letter-spacing: 1px;
+    }
+}
+.menu-download {
+    height: 330px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .menu-info {
+        width: 300px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+    .download-link {
+        font-family: $primaryFont;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        width: 43%;
+        display: block;
+        margin: auto;
+        color: $primaryColor;
+        font-size: 15px;
+    }
+}
+.services {
+    margin-top: 65px;
+    .title {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+    .subtitle {
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+    .service-image {
+        @include radiusImage;
+        margin-bottom: 25px;
+    }
+    .link {
+        text-align: left;
+    }
+    .service {
+        margin-bottom: 80px;
+    }
+}
+.gallery-section {
+    background: $treatmentSectionBackground;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .slider-nav {
+        margin-top: 35px;
+        position: relative;
+        .slick-list {
+            &.draggable {
+                width: 65%;
+                margin: auto;
+                .slide {
+                    margin-left: 25px;
+                }
+            }
+        }
+        .image-slide {
+            height: 195px;
+            overflow: hidden;
+        }
+    }
+    .video-title {
+        @include subTitle;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    .video-slide {
+        margin-right: 25px;
+    }
+}
+.slick-slider {
+    .slick-arrow {
+        @include middle_align;
+        position: absolute;
+        display: inline-block;
+        background: $lightColor;
+        color: $primaryColor;
+        font-family: $primaryFont;
+        text-transform: uppercase;
+        font-size: 14px;
+        width: auto;
+        padding: 5px;
+        font-weight: 700;
+        border: none;
+        &:hover,
+        &:focus {
+            outline: none;
+            background: $primaryColor;
+            color: $lightColor;
+        }
+        &.slick-prev {
+            left: 0;
+            &:before {
+                @include fontawesome;
+                color: $primaryFont;
+                content: '\f060';
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        &.slick-next {
+            right: 0;
+            &:after {
+                @include fontawesome;
+                color: $primaryFont;
+                content: '\f061';
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.appointment-banner {
+    background-color: $sectionBackground;
+    padding-top: 35px;
+    padding-bottom: 150px;
+    background-image: url('images/elixir-car.png');
+    background-repeat: no-repeat;
+    background-position: center 225px;
+    background-size: 250px;
+    li {
+        list-style: none;
+    }
+    .widgettitle {
+        @include mainTitle;
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+    .textwidget {
+        width: 60%;
+        margin: auto;
+        p {
+            @include subTitle;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: -5px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        a {
+            @include button;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+    .app-banner-info {
+        width: 59%;
+        margin: auto;
+    }
+}
+.banner {
+    /*height: 250px;*/
+    overflow: hidden;
+    background: url('images/background-banner.png') no-repeat center right;
+    background-size: 20%;
+    padding: 60px 0;
+    li {
+        list-style: none;
+        display: block;
+        width: 35%;
+        float: left;
+    }
+    .widgettitle {
+        @include mainTitle;
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 0;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+    p {
+        a {
+            @include link;
+        }
+    }
+}
+.elixir-blog {
+    background: $sectionBackground;
+    padding: 75px 0 75px;
+    .title {
+        margin-bottom: 60px;
+    }
+    .blog-image {
+        width: 65%;
+        float: left;
+    }
+    .blog-info {
+        width: 48%;
+        margin-left: -13%;
+        float: left;
+        padding: 20px 0;
+    }
+    .info-container {
+        background: $lightColor;
+        padding: 95px 60px;
+    }
+    .post-categories {
+        a {
+            color: $primaryColor;
+            font-family: $primaryFont;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            &:hover,
+            &:focus {
+                color: $primaryColor;
+            }
+        }
+        margin-bottom: 60px;
+    }
+    .subtitle {
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin-bottom: 25px;
+        font-weight: 700;
+        a {
+            color: $primaryColor;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $secondaryColor;
+            }
+        }
+    }
+    .link {
+        text-align: left;
+    }
+    .blog-post {
+        margin-bottom: 75px;
+    }
+}
+.stories {
+    background: #f6efcb;
+    padding: 70px 0;
+    .story {
+        width: 40%;
+        float: left;
+        margin: 15px;
+    }
+    .story-image {
+        margin-bottom: 80px;
+        img {
+            border-radius: 100%;
+        }
+    }
+    .subtitle {
+        margin-bottom: 45px;
+    }
+    .story-title,
+    .story-subtitle {
+        @include subTitle;
+        line-height: 1.3;
+        font-size: 18px;
+    }
+    .story-title {
+        font-weight: 700;
+    }
+    .stories-slider {
+        padding: 0 100px;
+    }
+}
+.booking-form {
+    background: url('images/form-bg.png') no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    .form-container {
+        padding: 0 195px;
+        overflow: hidden;
+    }
+    .title {
+        margin-bottom: 35px;
+    }
+    .form-field {
+        width: 48%;
+        float: left;
+        margin-bottom: 20px;
+        display: block;
+        &:nth-child(odd) {
+            margin-right: 4%;
+        }
+        &.full-width {
+            width: 100%;
+            float: none;
+        }
+        .input-field,
+        select {
+            width: 100%;
+        }
+    }
+    .phone-number-field {
+        background: $lightColor;
+    }
+    .country-code {
+        width: 105px;
+        float: left;
+        li,
+        .label {
+            position: relative;
+            padding-left: 30px;
+        }
+        .selectric {
+            padding-right: 10px;
+        }
+        .flag {
+            @include middle_align;
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            background-size: cover;
+            margin-left: 5px;
+            position: absolute;
+            left: 0;
+            &.emirates {
+                background-image: url('images/emirates-flag.png');
+            }
+            &.england {
+                background-image: url('images/englands-flag.png');
+            }
+        }
+    }
+    .phone-number-input {
+        width: calc(100% - 105px);
+        float: left;
+        .input-field {
+            padding-left: 0;
+        }
+    }
+}
+.selectric {
+    padding: 0 20px;
+    border: none;
+    background: $lightColor;
+    .label {
+        font-family: $primaryFont;
+        font-weight: 700;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 0;
+        height: 45px;
+        line-height: 45px;
+        text-align: left;
+        margin: 0;
+    }
+    .button {
+        background: none;
+        height: 45px;
+        line-height: 45px;
+        color: $primaryFont;
+        &:after {
+            @include fontawesome;
+            content: '\f078';
+            color: $primaryColor;
+            border: none;
+            font-size: 11px;
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+.selectric-items {
+    border: none;
+    li {
+        border: none;
+        padding: 0 20px;
+        &.selected,
+        &.highlighted {
+            background: #d8d7d7;
+            font-family: $primaryFont;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            height: 45px;
+            line-height: 45px;
+            text-align: left;
+            margin: 0;
+        }
+    }
+}
+.sponsors {
+    padding: 60px 0;
+    .title {
+        margin-bottom: 80px;
+    }
+}
+.sponsors-container {
+    overflow: hidden;
+    .sponsor {
+        width: 10%;
+        margin-right: 8%;
+        margin-bottom: 40px;
+        float: left;
+        &:nth-of-type(6n) {
+            margin-right: 0;
+        }
+    }
+}
+.clinics {
+    background: $sectionBackground;
+    padding: 50px 0;
+    h2 {
+        margin-bottom: 20px;
+    }
+    h3 {
+        @include paragraph;
+        font-size: 19px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}
+.clinics-container {
+    padding: 0 195px;
+}
+.clinic {
+    width: 38%;
+    float: left;
+    .clinic-address {
+        margin-bottom: 40px;
+        &:last-of-type {
+                margin-bottom: 0;
+            }
+    }
+    .clinic-flag {
+        width: 125px;
+        height: 125px;
+        display: block;
+        background: $lightColor;
+        border-radius: 100%;
+        position: relative;
+        margin-bottom: 50px;
+        &:before {
+            @include center_middle_align;
+            content: '';
+            width: 60px;
+            height: 40px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    &.emirates-clinic {
+        margin-right: 23%;
+        .clinic-flag {
+            &:before {
+                background-image: url('images/emirates-flag.png');
+            }
+        }
+    }
+    &.england-clinic {
+        .clinic-flag {
+            &:before {
+                background-image: url('images/englands-flag.png');
+            }
+        }
+    }
+    h4 {
+        @include subTitle;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1.3;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+@media #{$tablet} {
+    .about-section {
+        .about-content {
+            padding: 40px 100px 50px;
+        }
+        .custom-service {
+            padding: 0;
+        }
+    }
+    .menu-download {
+        height: 200px;
+        .menu-info {
+            width: 150px;
+        }
+        .download-link {
+            width: 100%;
+        }
+    }
+    .booking-form .form-container {
+        padding: 0 50px;
+    }
+    .clinics-container {
+        padding: 0 50px;
+    }
+}
+@media #{$mobile} {
+    .about-section {
+        .about-content {
+            padding: 30px 0;
+        }
+        .custom-service {
+            padding: 0;
+        }
+    }
+    .menu-download {
+        height: 300px;
+        .menu-info {
+            width: 150px;
+        }
+        .download-link {
+            width: 100%;
+        }
+    }
+    .booking-form .form-container {
+        padding: 0;
+    }
+    .clinics-container {
+        padding: 0;
+    }
+    .custom-service {
+        .description {
+            font-size: 22px;
+        }
+    }
+    .advantages {
+        .advantage {
+            width: 100%;
+            float: none;
+            overflow: hidden;
+            &:nth-child(even) {
+                margin-left: 0;
+            }
+        }
+    }
+    .appointment-banner {
+        .app-banner-info {
+            width: 100%;
+        }
+    }
+    .banner {
+        li {
+            width: 70%;
+        }
+    }
+    .elixir-blog {
+        .blog-post {
+            display: block;
+        }
+        .blog-image {
+            width: 100%;
+        }
+        .blog-info {
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+        .info-container {
+            padding: 40px;
+        }
+        .post-categories {
+            margin-bottom: 30px;
+        }
+    }
+    .gallery-section {
+        padding-bottom: 60px;
+        .slick-slider{
+            .slick-arrow {
+                top: auto;
+                bottom: -50px;
+            }
+        }
+        .slider-nav {
+            .slick-list {
+                &.draggable {
+                    width: 100%;
+                    .slide {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .video-slide {
+            margin-right: 0;
+        }
+    }
+    .stories {
+        .stories-slider {
+            padding: 0;
+        }
+    }
+    .clinic {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 50px;
+        &.emirates-clinic {
+            margin-left: 0;
+        }
+        .clinic-flag {
+            margin: 0 auto 50px;
+        }
+    }
+    .appointment-banner {
+        .widgettitle {
+            font-size: 20px;
+        }
+        .textwidget {
+            width: 100%;
+        }
+    }
+    .sponsors-container {
+        .sponsor {
+            width: 25%;
+            margin-bottom: 60px;
+            &:nth-child(4n) {
+                clear: left;
+            }
+        }
+    }
+}

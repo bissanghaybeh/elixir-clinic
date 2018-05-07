@@ -1,0 +1,10 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard 'process', command: 'ruby minify.rb -c' do
+  watch %r{^sass/(.+\.s[ac]ss)$}
+end
+
+# guard 'process', command: 'ruby minify.rb -j' do
+#   watch %r{^((?!assets\/js\/.+\.min\.js)(?!assets\/js\/.+\.compiled\.js)assets\/js\/.+\.js)$}
+# end

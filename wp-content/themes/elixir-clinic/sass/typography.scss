@@ -1,0 +1,133 @@
+@mixin mainTitle() {
+    font-family: $primaryFont;
+    font-size: 24px;
+    line-height: 1.9;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin: 0;
+}
+@mixin subTitle() {
+    @include mainTitle();
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: 400
+}
+@mixin paragraph() {
+  font-size: 15px;
+  font-family: $primaryFont;
+  font-weight: 400;
+  color: $secondaryColor;
+  line-height: 1.487;
+}
+@mixin button() {
+    background: $linkColor;
+    color: $primaryColor;
+    text-transform: uppercase;
+    padding: 15px;
+    width: 245px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background: $primaryColor;
+        color: $linkColor;
+    }
+}
+@mixin regularInput() {
+    font-family: $primaryFont;
+    font-weight: 400;
+    font-size: 11px;
+    background: $lightColor;
+    height: 45px;
+    color: $primaryColor;
+    padding: 0 20px;
+    border: none;
+    line-height: 45px;
+}
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        text-transform: uppercase;
+        opacity: 1;
+        color: $primaryColor;
+        font-weight: 700;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        text-transform: uppercase;
+        opacity: 1;
+        color: $primaryColor;
+        font-weight: 700;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        text-transform: uppercase;
+        opacity: 1;
+        color: $primaryColor;
+        font-weight: 700;
+    }
+    &:-ms-input-placeholder {
+        text-transform: uppercase;
+        opacity: 1;
+        color: $primaryColor;
+        font-weight: 700;
+    }
+}
+@mixin link() {
+    font-size: 12px;
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    color: $linkColor;
+    display: block;
+    text-align: center;
+    &:hover {
+        color: $linkColor;
+    }
+}
+.title {
+    @include mainTitle;
+}
+.subtitle {
+    @include subTitle;
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: $secondaryColor;
+            text-decoration: none;
+        }
+    }
+}
+.paragraph {
+    @include paragraph;
+}
+.link {
+    @include link;
+}
+.button {
+    @include button;
+}
+.flex {
+    @include flex();
+}
+textarea {
+    &.input-field {
+        height: auto;
+        line-height: 20px;
+        padding: 20px;
+    }
+}
+.input-field {
+    @include regularInput;
+    @include placeholder;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+}

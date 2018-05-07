@@ -1,0 +1,281 @@
+.opening-image {
+    margin-bottom: 40px;
+}
+.anchors-bar-wrapper {
+    background: $lightColor;
+    margin-bottom: 30px;
+    &.sticky {
+        position: fixed;
+        display: block;
+        top: 0;
+        z-index: 16;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .nav-tabs {
+        border: none;
+        > li {
+            display: block;
+            width: 12.5%;
+            float: left;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            border: none;
+            &:last-of-type {
+                border-left: none;
+            }
+            &:before {
+                content: '';
+                width: 2px;
+                background: $sectionBackground;
+                top: 15px;
+                bottom: 15px;
+                position: absolute;
+                right: 0;
+            }
+            a {
+                @include flex(column, nowrap,center, center);
+                font-weight: 700;
+                font-family: $primaryFont;
+                font-size: 15px;
+                color: $primaryColor;
+                height: 80px;
+                text-transform: uppercase;
+                padding: 0;
+                border: none;
+            }
+            span {
+                display: inline-block;
+                padding: 0 15px;
+            }
+            &.active,
+            &:hover,
+            &:focus {
+                a {
+                    border: none;
+                    background: none;
+                    color: $primaryColor;
+                    &:hover,
+                    &:focus {
+                        border: none;
+                        color: $primaryColor;
+                        background: none;
+                    }
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background: $linkColor;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+.page-template-page-services {
+    background: $sectionBackground;
+}
+.services-details {
+    padding-top: 30px;
+    .tab-section {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .title {
+        margin-bottom: 60px;
+    }
+    .list-service {
+        background: $lightColor;
+        padding: 45px 35px;
+        height: 100%;
+        .block-image {
+            @include radiusImage;
+            width: 115px;
+            float: left;
+            margin-right: 40px;
+        }
+        .block-details {
+            width: calc(100% - 155px);
+            float: left;
+        }
+        .link {
+            text-align: left;
+        }
+        .paragraph {
+            text-align: justify;
+        }
+    }
+}
+.service-info {
+    padding-bottom: 75px;
+    .row {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        .col-sm-6 {
+            margin-bottom: 25px;
+        }
+    }
+}
+#rejuvenation-therapy {
+    > .title {
+        display: none;
+    }
+}
+.sub-service-image {
+    @include radiusImage;
+    margin-bottom: 60px;
+}
+.sub-services {
+    margin-bottom: 80px;
+    .icon {
+        @include radiusImage;
+        width: 80px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .title {
+        margin-bottom: 35px;
+    }
+    .text-only {
+       float: none;
+       margin: auto;
+    }
+    .sub-content {
+        margin-bottom: 50px;
+        background: $lightColor;
+        padding: 70px 50px;
+        &.col-sm-12 {
+            padding: 110px 50px 0;
+            .sub-content-section {
+                margin-bottom: 80px;
+            }
+        }
+        position: relative;
+        .section-title-container {
+            @include center_align;
+            margin-top: -20px;
+            position: absolute;
+            top: 0;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            width: auto;
+            padding: 0 40px;
+            background: $linkColor;
+            display: inline-block;
+        }
+        h4 {
+            font-weight: 700;
+            font-size: 19px;
+        }
+    }
+}
+.sub-services-menu {
+    width: 200px;
+    position: fixed;
+    top: 300px;
+    z-index: 100;
+    left: 0;
+    display: none;
+    a {
+        display: block;
+        text-align: center;
+        font-family: $primaryFont;
+        text-transform: uppercase;
+        font-size: 15px;
+        background: $lightLinkColor;
+        color: $primaryColor;
+        padding: 10px;
+        &:hover,
+        &:focus {
+            color: $primaryColor;
+            text-decoration: none;
+            background: $linkColor;
+        }
+        &.active {
+            background: $linkColor;
+        }
+    }
+}
+@media #{$tablet} {
+    .anchors-bar-wrapper {
+        .nav-tabs {
+            > li {
+                a {
+                    font-size: 11px;
+                }
+                span {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+@media #{$mobile} {
+    .services {
+        margin-top: 30px;
+    }
+    .service-info {
+        padding-bottom: 0;
+    }
+    .anchors-bar-wrapper {
+        .nav-tabs {
+            > li {
+                width: 25%;
+                a {
+                    height: 60px;
+                    font-size: 11px;
+                }
+                span {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    .sub-services-menu {
+        width: 135px;
+        a {
+            font-size: 10px;
+        }
+    }
+    .services-details {
+        .list-service {
+            display: block;
+            .block-image {
+                float: none;
+                margin: 0 auto 20px;
+            }
+            .block-details {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+    .sub-services {
+        .sub-content {
+            h3 {
+                padding: 0 15px;
+                font-size: 17px;
+            }
+        }
+    }
+    .sub-services-container {
+        .col-md-6 {
+            margin-bottom: 40px;
+        }
+    }
+}
