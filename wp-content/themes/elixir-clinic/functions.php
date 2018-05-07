@@ -16,7 +16,6 @@ require_once TEMPLATEPATH . '/includes/menus.php';
 require_once TEMPLATEPATH . '/includes/globals.php';
 require_once TEMPLATEPATH . '/includes/custom-posts.php';
 require_once TEMPLATEPATH . '/includes/widget-areas.php';
-require_once TEMPLATEPATH . '/includes/ajax-actions.php';
 
 if (!function_exists('elixir_clinic_setup')) :
 

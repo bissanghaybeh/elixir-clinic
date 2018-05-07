@@ -32,18 +32,6 @@ get_header(); ?>
 		?>
 
 	</main><!-- .site-main -->
-
-    <div class="ramadan-widget">
-        <div class="container">
-            <form id="ramadan">
-                <select name="country" id="country">
-                    <option value="United Arab Emirates" >United Arab Emirates</option>
-                </select>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
 </div><!-- .content-area -->
 
 <?php get_sidebar(); ?>

@@ -142,27 +142,6 @@
            $(".menu-container-mobile").toggle();
         });
 
-        $( "#ramadan" ).on( "submit", function(event) {
-            event.preventDefault();
-            country = $("#country").val();
-            var data = ({
-                action: "send_ajax",
-                city: city,
-                country: country,
-            });
-            $.ajax({
-                type: "GET",
-                url: "/wp-admin/admin-ajax.php",
-                data: data,
-                contentType: "application/json; charset=utf-8",
-                dataType:    "json",
-                success: function(data){
-                    if (data.html) {
-                        console.log(data);
-//                        container.append(data.html);
-                    }
-                }
-            });
-        })
+        
     });
 })(jQuery);
