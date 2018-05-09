@@ -20,6 +20,12 @@ function elixir_widgets_init()
             'id' => 'banner',
         )
     );
+    register_sidebar(
+        array(
+            'name' => __('extras'),
+            'id' => 'extras',
+        )
+    );
 }
 
 add_action('widgets_init', 'elixir_widgets_init');

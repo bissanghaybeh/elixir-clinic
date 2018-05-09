@@ -30,7 +30,13 @@ get_header(); ?>
 			// End of the loop.
 		endwhile;
 		?>
-
+        <section class="appointment-banner">
+    <div class="container">
+        <div class="app-banner-info">
+            <?php dynamic_sidebar("extras"); ?>
+        </div>
+    </div>
+</section>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
 
